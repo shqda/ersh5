@@ -48,68 +48,44 @@ void loop() {
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 40px;
-  }
-
-  h1 {
-    margin-bottom: 30px;
-    font-size: 28px;
+      body {
+    background: #1a1a1a;
+    color: #d4af37;
   }
 
   .card {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 16px;
-    display: inline-block;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-  }
-
-  button {
-    width: 120px;
-    height: 50px;
-    margin: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.2s;
+    background: #262626;
+    border: 1px solid #3d3d3d;
   }
 
   .on {
-    background: #22c55e;
-    color: white;
+    background: #d4af37;
+    color: #1a1a1a;
   }
 
   .off {
-    background: #ef4444;
-    color: white;
+    background: #404040;
+    color: #a6a6a6;
   }
 
-  button:hover {
-    transform: scale(1.05);
-  }
 </style>
 </head>
-
 <body>
 
-<h1>ESP8266 Control Panel</h1>
+<h1></h1>
 
 <div class="card">
-  <p>LED Control</p>
+  <div class="status-text"></div>
 
-  <button class="on" onclick="location.href='/ON'">ON</button>
-  <button class="off" onclick="location.href='/OFF'">OFF</button>
+  <div class="btn-group">
+    <button class="on" onclick="location.href='/ON'">on</button>
+    <button class="off" onclick="location.href='/OFF'">off</button>
+  </div>
 </div>
 
 </body>
 </html>
+
 )rawliteral";
 
   client.print("HTTP/1.1 200 OK\r\n");
